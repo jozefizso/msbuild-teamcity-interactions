@@ -9,7 +9,6 @@ namespace TeamCityTasks
 {
     public class SetParameterTask : Task
     {
-
         public string Name { get; set; }
 
         public string Value { get; set; }
@@ -17,7 +16,7 @@ namespace TeamCityTasks
         public override bool Execute()
         {
             string messageFormat = "##teamcity[setParameter name='{0}' value='{1}']";
-            var escapedValue = this.Value.Replace("'", "|'");
+            var escapedValue = this.Value.TeamCityEscape();
             string message = String.Format(messageFormat, this.Name, escapedValue);
 
             this.Log.LogMessage(MessageImportance.Normal, message);
