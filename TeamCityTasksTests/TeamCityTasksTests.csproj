@@ -54,6 +54,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="MockBuildEngine.cs" />
+    <Compile Include="StringExtensionsTests.cs" />
     <Compile Include="SetParameterTaskTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
