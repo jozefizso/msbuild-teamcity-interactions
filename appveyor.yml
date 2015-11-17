@@ -5,6 +5,9 @@ platform: Any CPU
 configuration:
   - Release
   - Debug
+  
+before_build:
+  nuget restore
 
 branches:
   except:
