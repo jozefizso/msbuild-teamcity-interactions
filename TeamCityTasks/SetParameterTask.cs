@@ -17,7 +17,7 @@ namespace TeamCityTasks
         public override bool Execute()
         {
             string messageFormat = "##teamcity[setParameter name='{0}' value='{1}']";
-            var escapedValue = this.Value.Replace("'", "&apos;");
+            var escapedValue = this.Value.Replace("'", "|'");
             string message = String.Format(messageFormat, this.Name, escapedValue);
 
             this.Log.LogMessage(MessageImportance.Normal, message);

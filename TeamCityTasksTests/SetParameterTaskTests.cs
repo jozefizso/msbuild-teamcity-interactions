@@ -51,7 +51,7 @@ namespace TeamCityTasksTests
             var actualResult = task.Execute();
 
             Assert.True(actualResult);
-            CollectionAssert.Contains(engine.LoggedMessages, "##teamcity[setParameter name='MyParameter' value='parameter value&apos;s']");
+            CollectionAssert.Contains(engine.LoggedMessages, "##teamcity[setParameter name='MyParameter' value='parameter value|'s']");
         }
     }
 }
