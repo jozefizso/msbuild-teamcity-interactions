@@ -47,7 +47,7 @@ namespace TeamCityTasksTests
             var actualResult = task.Execute();
 
             Assert.True(actualResult);
-            CollectionAssert.Contains(engine.LoggedMessages, "My special |' || |n characters.']");
+            CollectionAssert.Contains(engine.LoggedMessages, "##teamcity[message text='My special |' || |n characters.']");
         }
     }
 }
