@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == ''" >Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TeamCityTasksPath Condition=" '$(TeamCityTasksPath)' == '' ">$(MSBuildThisFileDirectory)..\..\TeamCityTasks\bin\$(Configuration)\</TeamCityTasksPath>
+    <TeamCityTasksLib>$([MSBUILD]::Unescape($(TeamCityTasksPath)TeamCityTasks.dll))</TeamCityTasksLib>
+  </PropertyGroup>
+
+  <UsingTask AssemblyFile="$(TeamCityTasksLib)" TaskName="TeamCityTasks.SetParameterTask" />
+
+  <Target Name="Build">
+    <SetParameterTask Name="BuildTag" Value="MyApp_v1.0.0" />
+  </Target>
+</Project>

@@ -2,6 +2,7 @@
 using Microsoft.Build.Utilities;
 using NUnit.Framework;
 using TeamCityTasks;
+using TeamCityTasksTests.IntegrationTests;
 
 namespace TeamCityTasksTests
 {

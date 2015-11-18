@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Engine" />
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
@@ -44,6 +45,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -54,7 +56,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="IntegrationTests\LoggerMock.cs" />
     <Compile Include="MockBuildEngine.cs" />
+    <Compile Include="IntegrationTests\SetParameterTaskProjectFile.cs" />
     <Compile Include="TeamCityMessageTaskTests.cs" />
     <Compile Include="StringExtensionsTests.cs" />
     <Compile Include="SetParameterTaskTests.cs" />
@@ -67,6 +71,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="IntegrationTests\SetParameterTask.targets">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>
