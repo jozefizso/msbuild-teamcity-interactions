@@ -7,9 +7,9 @@
     <TeamCityTasksLib>$([MSBUILD]::Unescape($(TeamCityTasksPath)TeamCityTasks.dll))</TeamCityTasksLib>
   </PropertyGroup>
 
-  <UsingTask AssemblyFile="$(TeamCityTasksLib)" TaskName="TeamCityTasks.SetParameterTask" />
+  <UsingTask AssemblyFile="$(TeamCityTasksLib)" TaskName="TeamCityTasks.SetParameter" />
 
   <Target Name="Build">
-    <SetParameterTask Name="BuildTag" Value="MyApp_v1.0.0" />
+    <SetParameter Name="BuildTag" Value="MyApp_v1.0.0" />
   </Target>
 </Project>
