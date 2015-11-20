@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace TeamCityTasksTests.IntegrationTests
 {
     [TestFixture]
-    public class SetParameterTaskProjectFile
+    public class SetParameterTaskProjectTests
     {
         [Test]
         public void SetParameterTaskProject_RunsBuildTarget_OutputsSetParameterMessageInLog()

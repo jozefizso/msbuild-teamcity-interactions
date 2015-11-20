@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="IntegrationTests\LoggerMock.cs" />
     <Compile Include="MockBuildEngine.cs" />
-    <Compile Include="IntegrationTests\SetParameterTaskProjectFile.cs" />
+    <Compile Include="IntegrationTests\SetParameterTaskProjectTests.cs" />
     <Compile Include="TeamCityMessageTaskTests.cs" />
     <Compile Include="StringExtensionsTests.cs" />
     <Compile Include="SetParameterTests.cs" />
