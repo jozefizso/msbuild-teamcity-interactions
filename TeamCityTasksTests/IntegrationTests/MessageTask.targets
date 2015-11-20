@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == ''" >Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TeamCityTasksPath Condition=" '$(TeamCityTasksPath)' == '' ">$(MSBuildThisFileDirectory)..\..\TeamCityTasks\bin\$(Configuration)\</TeamCityTasksPath>
+    <TeamCityTasksLib>$([MSBUILD]::Unescape($(TeamCityTasksPath)TeamCityTasks.dll))</TeamCityTasksLib>
+  </PropertyGroup>
+
+  <UsingTask AssemblyFile="$(TeamCityTasksLib)" TaskName="TeamCityTasks.TeamCityMessage" />
+
+  <Target Name="Build">
+    <TeamCityMessage Text="Reporting a message to TeamCity build log." />
+  </Target>
+</Project>

@@ -7,7 +7,7 @@ using Microsoft.Build.Utilities;
 
 namespace TeamCityTasks
 {
-    public class TeamCityMessageTask : Task
+    public class TeamCityMessage : Task
     {
         public string Text { get; set; }
 

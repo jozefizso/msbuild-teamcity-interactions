@@ -7,12 +7,12 @@ using TeamCityTasksTests.IntegrationTests;
 namespace TeamCityTasksTests
 {
     [TestFixture]
-    public class TeamCityMessageTaskTests
+    public class TeamCityMessageTests
     {
         [Test]
-        public void TeamCityMessageTask_Class_IsMsbuildTask()
+        public void TeamCityMessage_Class_IsMsbuildTask()
         {
-            var task = new TeamCityMessageTask();
+            var task = new TeamCityMessage();
 
             Assert.IsInstanceOf<Task>(task);
         }
@@ -23,7 +23,7 @@ namespace TeamCityTasksTests
             var expectedText = "My TeamCity message.";
 
             var engine = new MockBuildEngine();
-            var task = new TeamCityMessageTask();
+            var task = new TeamCityMessage();
             task.BuildEngine = engine;
 
             task.Text = expectedText;
@@ -40,7 +40,7 @@ namespace TeamCityTasksTests
             var expectedText = "My special ' | \n characters.";
 
             var engine = new MockBuildEngine();
-            var task = new TeamCityMessageTask();
+            var task = new TeamCityMessage();
             task.BuildEngine = engine;
 
             task.Text = expectedText;
