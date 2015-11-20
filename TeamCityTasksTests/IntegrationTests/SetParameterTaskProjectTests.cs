@@ -6,10 +6,10 @@ using NUnit.Framework;
 namespace TeamCityTasksTests.IntegrationTests
 {
     [TestFixture]
-    public class SetParameterTaskProjectTests
+    public class TeamCitySetParameterTaskProjectTests
     {
         [Test]
-        public void SetParameterTaskProject_RunsBuildTarget_OutputsSetParameterMessageInLog()
+        public void TeamCitySetParameterTaskProject_RunsBuildTarget_OutputsSetParameterMessageInLog()
         {
             var props = new Dictionary<string, string>();
             props.Add("TeamCityTasksPath", Environment.CurrentDirectory + @"\");

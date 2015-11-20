@@ -7,12 +7,12 @@ using TeamCityTasksTests.IntegrationTests;
 namespace TeamCityTasksTests
 {
     [TestFixture]
-    public class SetParameterTests
+    public class TeamCitySetParameterTests
     {
         [Test]
-        public void SetParameterTask_Class_IsMsbuildTask()
+        public void TeamCitySetParameter_Class_IsMsbuildTask()
         {
-            var task = new SetParameter();
+            var task = new TeamCitySetParameter();
 
             Assert.IsInstanceOf<Task>(task);
         }
@@ -24,7 +24,7 @@ namespace TeamCityTasksTests
             var expectedValue = "parameter value";
 
             var engine = new MockBuildEngine();
-            var task = new SetParameter();
+            var task = new TeamCitySetParameter();
             task.BuildEngine = engine;
 
             task.Name = expectedName;
@@ -43,7 +43,7 @@ namespace TeamCityTasksTests
             var expectedValue = "parameter value's";
 
             var engine = new MockBuildEngine();
-            var task = new SetParameter();
+            var task = new TeamCitySetParameter();
             task.BuildEngine = engine;
 
             task.Name = expectedName;

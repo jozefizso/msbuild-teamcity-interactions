@@ -7,7 +7,7 @@ using Microsoft.Build.Utilities;
 
 namespace TeamCityTasks
 {
-    public class SetParameter : Task
+    public class TeamCitySetParameter : Task
     {
         public string Name { get; set; }
 
