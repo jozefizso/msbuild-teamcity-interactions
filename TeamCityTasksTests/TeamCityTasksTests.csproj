@@ -62,6 +62,7 @@
     <Compile Include="IntegrationTests\SetParameterTaskProjectTests.cs" />
     <Compile Include="TeamCityMessageTests.cs" />
     <Compile Include="StringExtensionsTests.cs" />
+    <Compile Include="TeamCityPublishArtifactsTests.cs" />
     <Compile Include="TeamCitySetParameterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

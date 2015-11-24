@@ -1,0 +1,10 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TeamCityTasksPath Condition="'$(TeamCityTasksPath)' == ''">$(MSBuildThisFileDirectory)</TeamCityTasksPath>
+    <TeamCityTasksLib>$([MSBUILD]::Unescape($(TeamCityTasksPath)TeamCityTasks.dll))</TeamCityTasksLib>
+  </PropertyGroup>
+
+  <UsingTask AssemblyFile="$(TeamCityTasksLib)" TaskName="TeamCityTasks.TeamCitySetParameter" />
+  <UsingTask AssemblyFile="$(TeamCityTasksLib)" TaskName="TeamCityTasks.TeamCityMessage" />
+  <UsingTask AssemblyFile="$(TeamCityTasksLib)" TaskName="TeamCityTasks.TeamCityPublishArtifacts" />
+</Project>
